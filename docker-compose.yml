@@ -5,12 +5,11 @@ mysql:
   volumes:
     - ~/db/mysql:/var/lib/mysql
     - ./config.cnf:/etc/mysql/conf.d/config.cnf
-    - ./init-dump:/docker-entrypoint-initdb.d
   environment:
     TERM: xterm
     APP_ENV: dev
-    MYSQL_USER: counter
-    MYSQL_PASSWORD: counter1123
-    MYSQL_DATABASE: counter
+    MYSQL_USER: root 
+    MYSQL_PASSWORD: root
+    MYSQL_DATABASE: 
     MYSQL_ROOT_PASSWORD: root
   container_name: mysql
