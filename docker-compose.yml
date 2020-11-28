@@ -1,9 +1,9 @@
-mysql:
+mysql57:
   image : mysql:5.7
   ports:
     - "3306:3306"
   volumes:
-    - ~/db/mysql:/var/lib/mysql
+    - ~/db/mysql57:/var/lib/mysql
     - ./config.cnf:/etc/mysql/conf.d/config.cnf
   environment:
     TERM: xterm
@@ -12,4 +12,4 @@ mysql:
     MYSQL_PASSWORD: root
     MYSQL_DATABASE: 
     MYSQL_ROOT_PASSWORD: root
-  container_name: mysql
+  container_name: mysql57
